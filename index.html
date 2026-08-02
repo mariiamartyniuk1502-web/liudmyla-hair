@@ -1,239 +1,500 @@
-<!DOCTYPE html>
-<html lang="en">
+v* {
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <title>Liudmyla Hairstylist | London</title>
+body {
+    font-family: Arial, sans-serif;
+}
 
-    <link rel="stylesheet" href="style.css">
-    </head>
-<body>
-    <nav class="navbar">
-    <div class="logo">Liudmyla Hair</div>
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
+.hero {
+    height: 100vh;
+    background: url("images/hair.jpg") center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-<a href="#gallery">Gallery</a>
-<a href="before-after">Before & After</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-        </div>
-        </nav>
+.overlay {
+    background: rgba(0,0,0,0.45);
+    padding: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+}
 
-<header class="hero">
-    <div class="overlay">
+h2 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
 
-        <h2>Luxury Hair Colour Specialist</h2>
+h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
 
-        <h1>Liudmyla Hairstylist</h1>
+p {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
 
-        <p>
-            AirTouch • Balayage • Ombre • Hair Colour • Haircuts
-        </p>
+.button {
+    background: #c9a46c;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-size: 18px;
+}
 
-        <a href="https://wa.me/447833822345?text=Hello%20Liudmyla!%20I%20would%20like%20to%20book%20an%20appointment." class="button" target="_blank">
-    Book Appointment </a>
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    z-index: 10;
+}
 
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
 
-    </div>
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+}
 
-</header>
-<section class="services">
+.nav-links a:hover {
+    color: #fc9a46;
+}
+.services{
+    background:#f8f8f8;
+    padding:80px 10%;
+    text-align:center;
+}
 
-    <h2>My Services</h2>
+.services h2{
+    font-size:42px;
+    margin-bottom:50px;
+}
 
-    <div class="service-box">
-        <h3>Balayage</h3>
-        <p>Natural-looking highlights for a soft and elegant finish.</p>
-    </div>
+.service-box{
+    background:white;
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
 
-    <div class="service-box">
-        <h3>Hair Colour</h3>
-        <p>Professional colouring using premium products.</p>
-    </div>
+.service-box h3{
+    color:#c99a46;
+    margin-bottom:15px;
+    font-size:28px;
+}
 
-    <div class="service-box">
-        <h3>Haircuts</h3>
-        <p>Women's cuts tailored to your style and face shape.</p>
-    </div>
+.service-box p{
+    color:#555;
+    font-size:18px;
+}
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
 
-</section>
-<section class="pricing" id="pricing">
-    <h2>Personalised Pricing</h2>
+.services h2{
+    width:100%;
+}
 
-    <p>
-        Every hair transformation is unique, and so is the price.
-        All prices are calculated individually.
-    </p>
+.service-box{
+    width:300px;
+}
+.gallery{
+    padding:80px 10%;
+    background:white;
+    text-align:center;
+}
 
-    <p><strong>Your personalised quote is based on:</strong></p>
+.gallery h2{
+    font-size:42px;
+    margin-bottom:50px;
+}
 
-    <ul>
-        <li>Hair length</li>
-        <li>Hair thickness</li>
-        <li>The colouring technique chosen</li>
-        <li>The complexity of the service</li>
-        <li>The amount of time and professional products required</li>
-    </ul>
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+}
 
-    <p>
-        To receive an accurate quotation, please send a few recent
-        photos of your hair when making your booking enquiry.
-    </p>
+.gallery-grid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
 
-    <p>
-        <strong>Please note:</strong>
-        All prices are discussed and confirmed individually before
-        your appointment.
-    </p>
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
 
+/* ABOUT SECTION */
 
-<a class="pricing-button"
-   href="https://wa.me/447833822345?text=Hello%20Liudmyla!%20I%20would%20like%20to%20receive%20a%20personal%20hair%20quote."
-   target="_blank">
-   Get Your Personal Quote
-</a>
+.about {
+    padding: 80px 10%;
+    background: #f8f8f8;
+}
 
-</section>
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
 
-<section class="gallery" id="gallery">
+.about-text {
+    flex: 1;
+}
 
-    <h2>Gallery</h2>
+.about-text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
 
-    <div class="gallery-grid">
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #555;
+}
 
-        <img src="images/photo1.jpg" alt="">
-        <img src="images/photo2.jpg" alt="">
-        <img src="images/photo3.jpg" alt="">
-        <img src="images/photo4.jpg" alt="">
-        <img src="images/photo5.jpg" alt="">
-        <img src="images/photo6.jpg" alt="">
+.about-image {
+    flex: 1;
+}
 
-    </div>
-    </section>
-    <section class="before-after" id="before-after">
-    <h2>Before & After</h2>
-    <p>Real transformations created by Liudmyla.</p>
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+* CONTACT SECTION */
 
-    <div class="before-after-grid">
-        <div class="transformation">
-            <img src="images/before1.jpg" alt="Before">
-            <img src="images/after1.jpg" alt="After">
-        </div>
+.contact {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 80px 10%;
+}
 
-        <div class="transformation">
-            <img src="images/before2.jpg" alt="Before">
-            <img src="images/after2.jpg" alt="After">
-        </div>
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-        <div class="transformation">
-            <img src="images/before3.jpg" alt="Before">
-            <img src="images/after3.jpg" alt="After">
-        </div>
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
 
-    </div>
-</section>
-<section class="about" id="about">
+.contact p {
+    font-size: 18px;
+    line-height: 1.8;
+}
 
-    
-    <div class="about-container">
+.contact-details {
+    margin: 30px 0;
+}
 
-        <div class="about-text">
-            <h2>Meet Liudmyla</h2>
+.contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 35px;
+    background: #d4a24c;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-            <p>
-                I am a professional hairstylist based in London,
-                specialising in modern hair colouring and personalised hair transformations.
-            </p>
+.contact-button:hover {
+    background: #b8862f;
+}
+/* FOOTER */
 
-            <p>
-                My services include AirTouch, balayage, blonding,
-                hair colouring and women's haircuts.
-            </p>
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
 
-            <p>
-                My goal is to create beautiful, healthy-looking hair
-                that suits every client's individual style.
-            </p>
-        </div>
+footer p {
+    margin: 8px 0;
+}
 
-        <div class="about-image">
-            <img src="images/liudmyla.jpg" alt="Liudmyla hairstylist">
-        </div>
+footer p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+}
 
-    </div>
-</section>
+footer p:last-child {
+    color: #bdbdbd;
+    font-size: 14px;
+}
+.map-container {
+    margin-top: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+/* Reviews */
 
-<section class="reviews" id="reviews">
+.reviews {
+    padding: 80px 10%;
+    background: #faf7f2;
+    text-align: center;
+}
 
-    <h2>Client Reviews</h2>
+.reviews h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #333;
+}
 
-    <div class="reviews-container">
+.reviews-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-        <div class="review-card">
-            <p>⭐⭐⭐⭐⭐</p>
-            <h3>Client Review</h3>
-            <p>Real client review will be added here.</p>
-        </div>
+.review-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
 
-        <div class="review-card">
-            <p>⭐⭐⭐⭐⭐</p>
-            <h3>Client Review</h3>
-            <p>Real client review will be added here.</p>
-        </div>
+.review-card:hover {
+    transform: translateY(-8px);
+}
 
-        <div class="review-card">
-            <p>⭐⭐⭐⭐⭐</p>
-            <h3>Client Review</h3>
-            <p>Real client review will be added here.</p>
-        </div>
+.review-card p:first-child {
+    font-size: 24px;
+    color: #d4a24c;
+}
 
-    </div>
+.review-card h3 {
+    margin: 15px 0;
+    color: #222;
+}
 
-</section>
-<section class="contact" id="contact">
-    <div class="contact-container">
+.review-card p:last-child {
+    color: #666;
+    line-height: 1.6;
+}
+.pricing {
+    background: #ffffff;
+    padding: 80px 10%;
+    text-align: center;
+}
 
-        <h2>Contact Me</h2>
+.pricing h2 {
+    font-size: 36px;
+    color: #d4af37;
+    margin-bottom: 30px;
+}
 
-        <p>Ready for your next hair transformation? Get in touch today!</p>
+.pricing p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto 20px;
+}
 
-        <div class="contact-details">
-            <p><strong>Location:</strong> Harrow, London</p>
-            <p><strong>Phone:</strong> <a href="tel:+447833822345">+447833822345</a></p>
-            <p><strong>Email:</strong> <a href="mailto:liudmylapukii@gmail.com">liudmylapukii@gmail.com</a></p>
-            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/liudmyla_hairstylist/" target="_blank">@liudmyla_hairstylist</a></p>
-        </div>
+.pricing ul {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
 
-        <a href="https://www.instagram.com/liudmyla_hairstylist/"
-           target="_blank"
-           class="contact-button">
-            Book Appointment
-        </a>
-        <div class="map-container">
-    <iframe
-        src="https://www.google.com/maps?q=Harrow,London&output=embed"
-        width="100%"
-        height="350"
-        style="border:0; border-radius:12px;"
-        allowfullscreen=""
-        loading="lazy">
-    </iframe>
-</div>
+.pricing ul li {
+    padding: 10px 0;
+    font-size: 18px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
 
-    </div>
-</section>
-<footer>
-    <p>Liudmyla Hair</p>
-    <p>Luxury Hair Colour Specialist</p>
-    <p>© 2026 All Rights Reserved</p>
-</footer>
+.pricing strong {
+    color: #d4af37;
+}
+.pricing-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 28px;
+    background: #d4af37;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-</body>
+.pricing-button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+.before-after {
+    padding: 80px 10%;
+    background: #f9f9f9;
+    text-align: center;
+}
 
-</html>
+.before-after h2 {
+    font-size: 36px;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.before-after p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.before-after-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.transformation {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.transformation img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.transformation img:hover {
+    transform: scale(1.03);
+}
+.pricing-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 35px;
+    background: #d4a24c;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.pricing-button:hover {
+    background: #b98a36;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 85vh;
+        padding: 20px;
+    }
+
+    .overlay {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .overlay h1 {
+        font-size: 40px;
+    }
+
+    .overlay h2 {
+        font-size: 18px;
+    }
+
+    .services,
+    .pricing,
+    .gallery,
+    .before-after,
+    .about,
+    .reviews,
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .gallery-grid,
+    .before-after-grid,
+    .reviews-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .contact-container {
+        width: 100%;
+    }
+
+    .contact h2,
+    .pricing h2,
+    .before-after h2 {
+        font-size: 32px;
+    }
+
+    .pricing-button,
+    .contact-button {
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    .map-container iframe {
+        height: 280px;
+    }
+}
